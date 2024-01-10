@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bn2gakj4r86jp"]
+
+[node name="Decode" type="Node2D"]
