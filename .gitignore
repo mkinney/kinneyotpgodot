@@ -8,6 +8,7 @@
 OTP
 OTP.apk
 OTP.apk.idsig
+*.aar
 
 Packaging.log
 OTP.ipa
