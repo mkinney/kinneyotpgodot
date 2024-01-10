@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 [display]
 
 window/stretch/mode="viewport"
+window/stretch/scale=1.1
+
+[gui]
+
+theme/custom="res://new_theme.tres"
 
 [rendering]
 

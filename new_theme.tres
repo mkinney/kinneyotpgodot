@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://d1eb43uroni42"]
+
+[ext_resource type="FontFile" uid="uid://c5eh801e8ar3f" path="res://cmu-typewriter/Typewriter/cmuntb.ttf" id="1_2mc1h"]
+
+[resource]
+Button/font_sizes/font_size = 30
+LineEdit/font_sizes/font_size = 30
+LineEdit/fonts/font = ExtResource("1_2mc1h")
+TextEdit/font_sizes/font_size = 30
