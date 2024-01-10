@@ -1,3 +1,17 @@
 # Godot 4+ specific ignores
+.*swp
 .godot/
 .DS_Store/
+.DS_Store
+*.zip
+
+OTP
+OTP.apk
+OTP.apk.idsig
+
+Packaging.log
+OTP.ipa
+OTP.pck
+OTP.xarchive
+
+*.a
