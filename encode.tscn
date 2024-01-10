@@ -173,6 +173,7 @@ editable = false
 [connection signal="pressed" from="GenerateTab" to="." method="_on_generate_tab_pressed"]
 [connection signal="pressed" from="SettingsTab" to="." method="_on_settings_tab_pressed"]
 [connection signal="pressed" from="AboutTab" to="." method="_on_about_tab_pressed"]
+[connection signal="gui_input" from="EncodeStuffs/Text" to="EncodeStuffs" method="_on_text_gui_input"]
 [connection signal="text_changed" from="EncodeStuffs/Text" to="EncodeStuffs" method="_on_text_text_changed"]
 [connection signal="text_changed" from="EncodeStuffs/Key" to="EncodeStuffs" method="_on_key_text_changed"]
 [connection signal="text_changed" from="DecodeStuffs/Text2Decode" to="DecodeStuffs" method="_on_text_2_decode_text_changed"]

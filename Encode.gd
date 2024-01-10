@@ -33,3 +33,7 @@ func _on_text_text_changed(_new_text):
 
 func _on_key_text_changed(_new_text):
 	do_enc()
+
+
+func _on_text_gui_input(event):
+	pass # Replace with function body.
