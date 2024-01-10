@@ -52,7 +52,22 @@ func decode(in_str):
 		else:
 			z = c % mAlphabet.length()
 		decoded += mAlphabet[z]		
-	return ["", decoded]	
+	return ["", decoded]
+	
+func generate_lots(a_seed):
+	var random_text = ""
+	seed(a_seed.hash())
+	for i in range(0, 1000):
+		var x = randi_range(0, mAlphabet.length())
+		var y = mAlphabet.substr(x, 1)
+		random_text += y
+		if i > 1:
+			if (i+1) % 5 == 0:
+				random_text += " "
+			if (i+1) % 25 == 0:
+				random_text += "\n"
+	return random_text
+	
 
 # Constructor
 func _init(key="", alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"):

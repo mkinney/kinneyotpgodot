@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://duqn6e10wc3q2"]
+[gd_scene load_steps=7 format=3 uid="uid://duqn6e10wc3q2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_kjdiu"]
 [ext_resource type="Script" path="res://Encode.gd" id="1_u7n5e"]
 [ext_resource type="Script" path="res://Decode.gd" id="3_q6f3c"]
+[ext_resource type="Script" path="res://Generate.gd" id="4_t3n61"]
+[ext_resource type="FontFile" uid="uid://c5eh801e8ar3f" path="res://cmu-typewriter/Typewriter/cmuntb.ttf" id="5_suefa"]
+
+[sub_resource type="FontVariation" id="FontVariation_c4aht"]
+base_font = ExtResource("5_suefa")
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_kjdiu")
@@ -112,6 +117,7 @@ offset_bottom = 580.0
 editable = false
 
 [node name="GenerateStuffs" type="Node2D" parent="."]
+script = ExtResource("4_t3n61")
 
 [node name="Seed" type="LineEdit" parent="GenerateStuffs"]
 offset_left = 100.0
@@ -125,6 +131,8 @@ offset_left = 100.0
 offset_top = 240.0
 offset_right = 700.0
 offset_bottom = 840.0
+theme_override_fonts/font = SubResource("FontVariation_c4aht")
+theme_override_font_sizes/font_size = 23
 
 [node name="SettingsStuffs" type="Node2D" parent="."]
 
@@ -165,3 +173,4 @@ editable = false
 [connection signal="text_changed" from="EncodeStuffs/Key" to="EncodeStuffs" method="_on_key_text_changed"]
 [connection signal="text_changed" from="DecodeStuffs/Text2Decode" to="DecodeStuffs" method="_on_text_2_decode_text_changed"]
 [connection signal="text_changed" from="DecodeStuffs/dKey" to="DecodeStuffs" method="_on_d_key_text_changed"]
+[connection signal="text_changed" from="GenerateStuffs/Seed" to="GenerateStuffs" method="_on_seed_text_changed"]

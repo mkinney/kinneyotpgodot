@@ -7,7 +7,7 @@ var mAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 func gen():
 	var out = ""
-	for i in range(mAlphabet.length()):
+	for i in range(0, mAlphabet.length()):
 		var x = randi_range(0, mAlphabet.length())
 		out += mAlphabet[x]
 
@@ -19,4 +19,7 @@ func _init(a_seed="", length=20, alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
 	
 	if (mSeed == ""):
 		# random TODO
-		pass
+		var rng = RandomNumberGenerator.new()
+		randomize()
+	else:
+		seed(a_seed.hash())
