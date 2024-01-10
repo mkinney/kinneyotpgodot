@@ -6,8 +6,6 @@ extends Node2D
 @onready var settingsStuffs = get_node("SettingsStuffs")
 @onready var aboutStuffs = get_node("AboutStuffs")
 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	encodeStuffs.visible = true
@@ -17,7 +15,7 @@ func _ready():
 	aboutStuffs.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func _on_encode_tab_pressed():

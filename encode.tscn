@@ -86,7 +86,7 @@ offset_left = 100.0
 offset_top = 130.0
 offset_right = 700.0
 offset_bottom = 230.0
-text = "Text to decode"
+placeholder_text = "Text to decode"
 
 [node name="dKey" type="LineEdit" parent="DecodeStuffs"]
 offset_left = 100.0
@@ -101,6 +101,13 @@ offset_top = 350.0
 offset_right = 700.0
 offset_bottom = 450.0
 placeholder_text = "Decoded"
+
+[node name="dMessage" type="LineEdit" parent="DecodeStuffs"]
+offset_left = 100.0
+offset_top = 480.0
+offset_right = 700.0
+offset_bottom = 580.0
+editable = false
 
 [node name="GenerateStuffs" type="Node2D" parent="."]
 

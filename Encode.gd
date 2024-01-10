@@ -11,31 +11,26 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func enc(pText, pKey):
-	var key = pKey.to_upper()
-	var text = pText.to_upper()
-	var otp = OTP.new(key)
-	print("text:", text, " key:", key)
-	return otp.encode(text)
+	var key1 = pKey.to_upper()
+	var text1 = pText.to_upper()
+	var otp = OTP.new(key1)
+	return otp.encode(text1)
 
 func do_enc():
 	var results = enc(text.text, key.text)
 	if results:
-		print("results 0:", results[0], " 1:", results[1])
 		encoded.text = results[1]
 		eMessage.text = results[0]
 	else:
 		print("results size is wonky ", results)
 
-func _on_text_text_changed(new_text):
-	print("in on text text changed...")
+func _on_text_text_changed(_new_text):
 	do_enc()
-	#encoded.text = new_text.to_upper()
-		
+	#encoded.text = new_text.to_upper()		
 
-func _on_key_text_changed(new_text):
-	print("in on key text changed...")
+func _on_key_text_changed(_new_text):
 	do_enc()
